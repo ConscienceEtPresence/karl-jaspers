@@ -1163,3 +1163,82 @@ p.cequecest {
   .hero-portes { flex-direction: column; align-items: stretch; }
   .btn-porte { text-align: center; }
 }
+
+/* ---------- Jaspers au quotidien ---------- */
+
+.garde {
+  background: rgba(166, 90, 74, 0.07);
+  border: 1px solid rgba(166, 90, 74, 0.35);
+  border-left: 3px solid var(--rose);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.garde .cas-label { color: var(--rose); }
+.garde p:last-child { margin-bottom: 0; color: var(--ink-soft); }
+
+.cas-liste {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md) 0;
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.cas {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  scroll-margin-top: 1rem;
+}
+
+.cas h2 {
+  font-size: 1.7rem;
+  color: var(--ink-title);
+  margin-bottom: var(--space-sm);
+}
+
+.cas-vecu {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-md);
+}
+
+.cas-label {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.cas-pas {
+  background: rgba(166, 90, 74, 0.06);
+  border-left: 2px solid rgba(166, 90, 74, 0.45);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.cas-pas .cas-label { color: var(--rose); }
+.cas-pas p:last-child { margin-bottom: 0; color: var(--ink-soft); font-size: 0.98rem; }
+
+.cas-offre {
+  background: rgba(46, 125, 122, 0.06);
+  border-left: 2px solid var(--turquoise);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.cas-offre .cas-label { color: var(--turquoise); }
+.cas-offre p:last-child { margin-bottom: 0; }
+
+.cas-aller {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  margin-bottom: var(--space-xs);
+}
