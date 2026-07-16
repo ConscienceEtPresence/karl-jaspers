@@ -907,3 +907,129 @@ p.cequecest {
 }
 
 .gloss-letter:first-child { margin-top: 0; }
+
+/* ---------- Citations ---------- */
+
+.cit-filtres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  max-width: 720px;
+  margin: 0 auto var(--space-lg);
+  padding: 0 var(--space-md);
+}
+
+.cit-filtres button {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.95rem;
+  cursor: pointer;
+}
+
+.cit-filtres button:hover { border-color: var(--gold); color: var(--gold); }
+.cit-filtres button[aria-pressed="true"] {
+  background: var(--gold); border-color: var(--gold); color: var(--paper);
+}
+
+.cit-liste {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--space-md) var(--space-xl);
+  display: grid;
+  gap: var(--space-md);
+}
+
+.cit {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.cit-texte {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink-title);
+  margin-bottom: var(--space-sm);
+}
+
+.cit-de {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin-bottom: var(--space-sm);
+}
+
+.cit-source {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ink-mute);
+  margin-bottom: var(--space-sm);
+}
+
+.cit-go { font-family: var(--font-sans); font-size: 0.85rem; }
+
+/* ---------- Lire Jaspers ---------- */
+
+.oeuvre {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr;
+  gap: var(--space-md);
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.oeuvre-date {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--gold);
+  line-height: 1.3;
+}
+
+.oeuvre-titre {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ink-title);
+  line-height: 1.3;
+}
+
+.oeuvre-de {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-mute);
+}
+
+.oeuvre-note { color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.25rem; }
+
+.oeuvres { display: grid; gap: var(--space-sm); margin: var(--space-md) 0; }
+
+.niveau {
+  border-left: 3px solid var(--turquoise);
+  background: rgba(46, 125, 122, 0.05);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.niveau strong {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--ink-title);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+@media (max-width: 560px) {
+  .oeuvre { grid-template-columns: 1fr; gap: 0.2rem; }
+}
