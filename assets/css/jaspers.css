@@ -834,3 +834,37 @@ p.cequecest {
   font-style: italic;
   padding: var(--space-lg) 0;
 }
+
+/* ---------- Barre de retour ---------- */
+
+.retour-bar {
+  background: var(--night);
+  border-top: 1px solid rgba(143, 160, 196, 0.14);
+  padding: 0.5rem var(--space-md);
+}
+
+.retour-lien {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--star-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.2rem 0;
+}
+
+.retour-lien:hover { color: var(--gold-soft); text-decoration: none; }
+.retour-lien:focus-visible { outline: 1px solid var(--gold-soft); outline-offset: 4px; }
+
+.retour-lien .fleche { font-size: 1.05rem; line-height: 1; }
+
+/* Retour de bas de page, sur fond parchemin */
+.retour-bas {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--space-md) var(--space-xl);
+}
+
+.retour-bas .retour-lien { color: var(--ink-mute); }
+.retour-bas .retour-lien:hover { color: var(--gold); }
