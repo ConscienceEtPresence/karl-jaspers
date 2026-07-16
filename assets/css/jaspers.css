@@ -517,3 +517,89 @@ blockquote.jaspers footer {
   .constellation-wrap svg { min-width: 740px; }
   .c-stratum { font-size: 17px; }
 }
+
+/* ---------- Faux amis (« Ne pas confondre ») ---------- */
+
+ul.fauxamis {
+  list-style: none;
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+ul.fauxamis li {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md) var(--space-sm) 2.6rem;
+  position: relative;
+  color: var(--ink-soft);
+}
+
+ul.fauxamis li::before {
+  content: "✕";
+  position: absolute;
+  left: 1rem;
+  top: 0.85rem;
+  color: var(--rose);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+}
+
+ul.fauxamis li strong { color: var(--ink-title); }
+
+p.cequecest {
+  background: var(--paper-deep);
+  border-left: 3px solid var(--turquoise);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--ink-title);
+}
+
+/* ---------- Le chemin ---------- */
+
+.chemin {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.chemin-etape {
+  display: block;
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  color: inherit;
+  transition: border-color .3s ease, transform .3s ease;
+}
+
+.chemin-etape:hover {
+  border-color: var(--gold);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.chemin-etape .etape-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.chemin-etape h3 {
+  font-size: 1.35rem;
+  margin: 0.15rem 0 0.3rem;
+}
+
+.chemin-etape p { color: var(--ink-soft); margin: 0; }
+
+.chemin-fleche {
+  text-align: center;
+  color: var(--gold-soft);
+  font-size: 1.4rem;
+  line-height: 1;
+  margin: var(--space-sm) 0;
+  user-select: none;
+}
