@@ -662,3 +662,83 @@ p.cequecest {
   font-style: italic;
   color: var(--ink-title);
 }
+
+/* ---------- Il refuse / Il défend ---------- */
+
+.rd {
+  display: grid;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.rd-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.rd-refuse, .rd-defend {
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.98rem;
+}
+
+.rd-refuse {
+  background: rgba(166, 90, 74, 0.07);
+  border: 1px solid rgba(166, 90, 74, 0.28);
+  color: var(--ink-soft);
+}
+
+.rd-defend {
+  background: rgba(46, 125, 122, 0.07);
+  border: 1px solid rgba(46, 125, 122, 0.28);
+  color: var(--ink-title);
+}
+
+.rd-arrow {
+  color: var(--gold);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.rd-head {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding-bottom: 0.2rem;
+}
+.rd-head.r { color: var(--rose); }
+.rd-head.d { color: var(--turquoise); }
+
+@media (max-width: 700px) {
+  .rd-row { grid-template-columns: 1fr; gap: 0.3rem; }
+  .rd-arrow { text-align: left; transform: rotate(90deg); width: 1.5rem; }
+  .rd-row.rd-headrow { display: none; }
+}
+
+/* Généalogie : avant / autour */
+.genea {
+  display: grid;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+}
+
+.genea-item {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.genea-item strong {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ink-title);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.genea-item span { color: var(--ink-soft); font-size: 0.98rem; }
