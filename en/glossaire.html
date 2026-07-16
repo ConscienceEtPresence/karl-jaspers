@@ -60,10 +60,13 @@
       </div>
     </section>
 
+    <div id="gloss-haut"></div>
+
     <div class="gloss-tools">
       <input class="gloss-search" id="gloss-search" type="search"
              placeholder="Search a concept, a German word…" aria-label="Search a concept, a German word…" autocomplete="off">
       <nav class="gloss-alpha" id="gloss-alpha" aria-label="A-Z">
+      <a href="#gloss-haut" class="az-haut" title="Back to top" aria-label="Back to top">↑</a>
       <a href="#l-A" data-letter="A">A</a>
       <a href="#l-B" data-letter="B">B</a>
       <a href="#l-C" data-letter="C">C</a>
@@ -988,8 +991,11 @@
   input.addEventListener('input', filtrer);
 
   // Cliquer une lettre efface la recherche pour que l'ancre soit atteignable
-  document.getElementById('gloss-alpha').addEventListener('click', function () {
+  document.getElementById('gloss-alpha').addEventListener('click', function (ev) {
+    // cliquer une lettre efface la recherche, sinon l'ancre serait masquée
     if (input.value) { input.value = ''; filtrer(); }
+    var a = ev.target.closest('a.az-haut');
+    if (a) { ev.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
   });
 })();
 </script>

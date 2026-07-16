@@ -1055,3 +1055,53 @@ p.cequecest {
 
 .plan-site p:last-child { margin-bottom: 0; color: var(--ink-soft); font-size: 0.98rem; }
 .plan-site strong { color: var(--ink-title); }
+
+/* ---------- Glossaire : la barre d'outils suit le lecteur ----------
+   119 entrées sur une page = 88 écrans. La recherche et l'A-Z doivent
+   rester atteignables partout, sinon cliquer une lettre est un piège. */
+
+.gloss-tools {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 6px 16px -10px rgba(27, 42, 78, 0.35);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+/* l'A-Z tient sur une seule ligne, qui défile latéralement si besoin */
+.gloss-alpha {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+  scrollbar-width: thin;
+  padding-bottom: 0.2rem;
+}
+
+.gloss-alpha a { flex: 0 0 auto; }
+
+/* le « ↑ » qui ramène en haut, dans la barre elle-même */
+.gloss-alpha a.az-haut {
+  border-color: var(--gold);
+  color: var(--gold);
+  font-size: 1rem;
+  line-height: 1.1;
+}
+.gloss-alpha a.az-haut:hover { background: var(--gold); color: var(--paper); }
+
+.gloss-count { margin-top: var(--space-xs); }
+
+/* les ancres ne doivent pas se cacher sous la barre collante */
+.gloss-letter { scroll-margin-top: 7.5rem; }
+
+@media (max-width: 560px) {
+  .gloss-tools { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .gloss-search { font-size: 0.95rem; padding: 0.55rem 1rem; }
+  .gloss-alpha { margin-top: var(--space-sm); gap: 0.25rem; }
+  .gloss-alpha a { min-width: 1.8rem; padding: 0.2rem 0.3rem; }
+  .gloss-letter { scroll-margin-top: 9rem; }
+}
