@@ -1,0 +1,519 @@
+/* ============================================================
+   KARL JASPERS — charte du site (titre provisoire)
+   Famille visuelle ConscienceEtPresence : parchemin, encre nuit, or.
+   Signature propre : le ciel nocturne de la constellation.
+   ============================================================ */
+
+:root {
+  /* Palette — reprise de la famille lavoiedudedans */
+  --paper:        #FBF7EF;
+  --paper-warm:   #F5EDDD;
+  --paper-deep:   #EFE4CE;
+  --ink:          #0F1830;
+  --ink-title:    #1B2A4E;
+  --ink-soft:     #2E4762;
+  --ink-mute:     #5B6A85;
+  --gold:         #B8860B;
+  --gold-soft:    #D4A93A;
+  --rose:         #A65A4A;
+  --turquoise:    #2E7D7A;
+  --line:         #DCCFB5;
+  --shadow:       0 4px 24px rgba(27, 42, 78, 0.08);
+  --shadow-soft:  0 2px 12px rgba(27, 42, 78, 0.05);
+
+  /* Ciel nocturne — l'encre devient la nuit */
+  --night:        #0B1226;
+  --night-high:   #16223F;
+  --star:         #F2E9D5;
+  --star-dim:     #8FA0C4;
+
+  --font-serif:   'Source Serif 4', 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+  --font-display: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.4rem;
+  --space-lg: 2.4rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  --measure: 65ch;
+  --radius: 4px;
+  --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.72;
+  font-feature-settings: "kern", "liga", "calt";
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink-title);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a { color: var(--turquoise); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+em { font-style: italic; }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--night);
+  color: var(--star);
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.site-header .brand {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: var(--star);
+}
+
+.site-header .brand:hover { text-decoration: none; color: var(--gold-soft); }
+
+.site-nav {
+  display: flex;
+  gap: var(--space-md);
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.site-nav a { color: var(--star-dim); }
+.site-nav a:hover { color: var(--gold-soft); text-decoration: none; }
+.site-nav a.is-soon { opacity: 0.45; cursor: default; }
+.site-nav a.is-soon:hover { color: var(--star-dim); }
+
+.lang-switch {
+  border: 1px solid rgba(212, 169, 58, 0.5);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  color: var(--gold-soft) !important;
+}
+.lang-switch:hover { background: rgba(212, 169, 58, 0.12); }
+
+/* ---------- Hero nocturne ---------- */
+
+.hero {
+  position: relative;
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 110%, var(--night-high) 0%, var(--night) 70%);
+  color: var(--star);
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 12% 22%, rgba(242,233,213,.9) 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 64%, rgba(242,233,213,.5) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 41% 15%, rgba(242,233,213,.8) 50%, transparent 51%),
+    radial-gradient(1px 1px at 57% 42%, rgba(242,233,213,.45) 50%, transparent 51%),
+    radial-gradient(1px 1px at 66% 74%, rgba(242,233,213,.6) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 78% 28%, rgba(242,233,213,.85) 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 58%, rgba(242,233,213,.5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 8% 82%, rgba(242,233,213,.4) 50%, transparent 51%),
+    radial-gradient(1px 1px at 94% 12%, rgba(242,233,213,.6) 50%, transparent 51%),
+    radial-gradient(1px 1px at 49% 88%, rgba(242,233,213,.35) 50%, transparent 51%);
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  color: var(--star);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.hero .hero-dates {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.25em;
+  color: var(--star-dim);
+  margin-top: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.hero .hero-motto {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  color: var(--gold-soft);
+  margin-top: var(--space-lg);
+}
+
+.hero .hero-intro {
+  max-width: 44ch;
+  margin: var(--space-md) auto 0;
+  color: var(--star-dim);
+  font-size: 0.98rem;
+}
+
+/* ---------- Constellation ---------- */
+
+.constellation-section {
+  background: var(--night);
+  padding: 0 var(--space-sm) var(--space-xl);
+}
+
+.constellation-wrap {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.constellation-wrap svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.constellation-hint {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--star-dim);
+  margin-bottom: var(--space-md);
+}
+
+/* Étoiles */
+.c-node { cursor: pointer; }
+.c-node circle.halo {
+  fill: transparent;
+  transition: fill 0.35s ease;
+}
+.c-node circle.core {
+  fill: var(--star);
+  transition: fill 0.35s ease;
+  animation: twinkle 4.2s ease-in-out infinite;
+}
+.c-node.is-soon circle.core { fill: var(--star-dim); opacity: 0.75; }
+.c-node text {
+  fill: var(--star);
+  font-family: var(--font-display);
+  font-size: 19px;
+  letter-spacing: 0.02em;
+  transition: fill 0.35s ease;
+}
+.c-node.is-soon text { fill: var(--star-dim); }
+.c-node:hover circle.halo,
+.c-node.is-active circle.halo { fill: rgba(212, 169, 58, 0.16); }
+.c-node:hover circle.core,
+.c-node.is-active circle.core { fill: var(--gold-soft); animation-play-state: paused; }
+.c-node:hover text,
+.c-node.is-active text { fill: var(--gold-soft); }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+.c-edge {
+  stroke: rgba(143, 160, 196, 0.28);
+  stroke-width: 1;
+  transition: stroke 0.35s ease;
+}
+.c-edge.is-lit { stroke: rgba(212, 169, 58, 0.65); }
+
+.c-ring {
+  fill: none;
+  stroke: rgba(212, 169, 58, 0.30);
+  stroke-width: 1;
+  stroke-dasharray: 2 7;
+}
+
+.c-ring-label {
+  fill: rgba(212, 169, 58, 0.75);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 19px;
+  letter-spacing: 0.14em;
+}
+
+.c-stratum {
+  fill: rgba(143, 160, 196, 0.4);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* Carte de lecture sous la constellation */
+.c-card {
+  max-width: 620px;
+  margin: var(--space-md) auto 0;
+  background: rgba(22, 34, 63, 0.75);
+  border: 1px solid rgba(212, 169, 58, 0.25);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  color: var(--star);
+  min-height: 7.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.c-card .c-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--gold-soft);
+}
+
+.c-card .c-card-text {
+  color: var(--star-dim);
+  font-size: 0.95rem;
+}
+
+.c-card .c-card-go {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+/* ---------- Sections parchemin ---------- */
+
+.page-body {
+  background:
+    radial-gradient(ellipse at top, rgba(212, 169, 58, 0.08) 0%, transparent 55%),
+    var(--paper);
+}
+
+.section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.section + .section { border-top: 1px solid var(--line); }
+
+.section h2 {
+  font-size: 1.9rem;
+  margin-bottom: var(--space-md);
+}
+
+.section .kicker {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-xs);
+}
+
+.section p { max-width: var(--measure); margin-bottom: var(--space-md); }
+.section p:last-child { margin-bottom: 0; }
+
+.section .lead {
+  font-size: 1.12rem;
+  color: var(--ink-soft);
+}
+
+.btn-ghost {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 999px;
+  padding: 0.5rem 1.3rem;
+  margin-top: var(--space-sm);
+}
+.btn-ghost:hover { background: var(--gold); color: var(--paper); text-decoration: none; }
+.btn-ghost.is-soon { opacity: 0.5; pointer-events: none; }
+
+/* Gabarit en 5 temps (présentation accueil) */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  display: grid;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.steps li {
+  counter-increment: step;
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md) var(--space-sm) 3.4rem;
+  position: relative;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+
+.steps li strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink-title);
+  display: block;
+}
+
+.steps li span { color: var(--ink-soft); font-size: 0.95rem; }
+
+/* ---------- Pages concept ---------- */
+
+.concept-hero {
+  background: var(--night);
+  color: var(--star);
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.concept-hero .kicker { color: var(--gold-soft); margin-bottom: var(--space-xs); }
+
+.concept-hero h1 {
+  color: var(--star);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+}
+
+.concept-hero .original {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--star-dim);
+  margin-top: var(--space-xs);
+  font-size: 1.1rem;
+}
+
+.temps {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.temps + .temps { border-top: 1px solid var(--line); }
+
+.temps .temps-label {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-xs);
+}
+
+.temps h2 { font-size: 1.7rem; margin-bottom: var(--space-md); }
+.temps p { max-width: var(--measure); margin-bottom: var(--space-md); }
+
+.essence {
+  background: var(--paper-deep);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--ink-title);
+}
+
+blockquote.jaspers {
+  border-left: 3px solid var(--gold-soft);
+  padding: var(--space-sm) var(--space-lg);
+  margin: var(--space-md) 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+blockquote.jaspers footer {
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  margin-top: var(--space-xs);
+}
+
+.voisins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.voisins a {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  color: var(--ink-soft);
+  background: var(--paper-warm);
+}
+.voisins a:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--night);
+  color: var(--star-dim);
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  font-size: 0.85rem;
+}
+
+.site-footer .footer-motto {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold-soft);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 760px) {
+  html { font-size: 17px; }
+  /* Sur téléphone : la constellation garde une taille lisible (≥ 12 pt)
+     et se parcourt par un léger défilement horizontal, centré au départ. */
+  .constellation-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .constellation-wrap svg { min-width: 740px; }
+  .c-stratum { font-size: 17px; }
+}

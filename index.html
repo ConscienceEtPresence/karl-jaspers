@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karl Jaspers — Philosophie de l'existence</title>
+  <meta name="description" content="La vie et la pensée de Karl Jaspers, expliquées simplement et fidèlement : situations-limites, Existenz, Englobant, Transcendance, communication, foi philosophique.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/jaspers.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">Karl Jaspers</a>
+  <nav class="site-nav" aria-label="Navigation principale">
+    <a class="is-soon" title="Bientôt">L'homme</a>
+    <a href="#constellation-section">Les concepts</a>
+    <a class="is-soon" title="Bientôt">Glossaire</a>
+    <a class="is-soon" title="Bientôt">Citations</a>
+    <a class="is-soon" title="Bientôt">Lire Jaspers</a>
+    <a class="lang-switch" href="en/index.html" lang="en">English</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>Karl Jaspers</h1>
+    <p class="hero-dates">Oldenburg 1883 — Bâle 1969</p>
+    <p class="hero-motto">« Philosopher, c'est être en route. »</p>
+    <p class="hero-intro">
+      Médecin devenu philosophe, témoin des naufrages de son siècle,
+      Jaspers n'a jamais enseigné un système : il a éclairé un chemin.
+      Ce site voudrait rendre ce chemin praticable — pour chacun.
+    </p>
+  </section>
+
+  <section class="constellation-section" id="constellation-section" aria-label="Constellation des concepts">
+    <p class="constellation-hint">Survolez une étoile · cliquez pour entrer</p>
+    <div class="constellation-wrap">
+      <div id="constellation"></div>
+    </div>
+    <div class="c-card" id="constellation-card" aria-live="polite"></div>
+  </section>
+
+  <div class="page-body">
+
+    <section class="section">
+      <p class="kicker">L'homme</p>
+      <h2>Une vie qui incarne sa pensée</h2>
+      <p class="lead">
+        Avant les concepts, il y a un homme. Un cardiaque condamné jeune par les médecins,
+        qui fit de sa fragilité une méthode. Un psychiatre qui comprit que l'homme
+        ne se laisse pas réduire à un diagnostic. Un professeur destitué par le
+        régime nazi, qui refusa de quitter Gertrud, son épouse juive — ils gardaient
+        ensemble le poison, pour ne jamais être séparés.
+      </p>
+      <p>
+        Sa biographie n'est pas une annexe de sa philosophie : elle en est la preuve
+        vivante. Chaque concept de la constellation ci-dessus, Jaspers l'a d'abord traversé.
+      </p>
+      <a class="btn-ghost is-soon">Lire sa vie — bientôt</a>
+    </section>
+
+    <section class="section">
+      <p class="kicker">La méthode de ce site</p>
+      <h2>Chaque concept, en cinq temps</h2>
+      <p>
+        Jaspers ne se résume pas — mais il s'approche. Chaque page de concept
+        suit le même chemin, du plus simple au plus profond&nbsp;:
+      </p>
+      <ol class="steps">
+        <li><strong>En une phrase</strong><span>l'essentiel, sans aucun jargon</span></li>
+        <li><strong>L'expérience</strong><span>on part d'un vécu concret, que chacun connaît</span></li>
+        <li><strong>La pensée</strong><span>l'approfondissement fidèle, dans les mots de Jaspers éclairés</span></li>
+        <li><strong>En résonance</strong><span>ce que cette idée change, quand on vit avec elle</span></li>
+        <li><strong>Dans ses mots</strong><span>citations courtes et sourcées, concepts voisins</span></li>
+      </ol>
+      <a class="btn-ghost" href="concepts/situations-limites.html">Voir la première page : les situations-limites</a>
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-motto">« Ce qui compte n'est pas le résultat, mais le mouvement de la pensée. »</p>
+  <p>Site en construction — les explications sont rédigées originales ; les citations, courtes et sourcées.</p>
+</footer>
+
+<script>
+window.CONSTELLATION_DATA = {
+  ariaLabel: "Constellation des concepts de Karl Jaspers",
+  ring: "L'ENGLOBANT — das Umgreifende",
+  strata: [
+    { label: "Transcendance", x: 32, y: 150, vertical: true },
+    { label: "Existence",     x: 32, y: 330, vertical: true },
+    { label: "Monde",         x: 32, y: 510, vertical: true }
+  ],
+  card: {
+    title: "La constellation de sa pensée",
+    text: "Tout se tient : les situations-limites éveillent l'Existenz, l'Existenz s'ouvre à la Transcendance, la Transcendance ne parle que par chiffres. L'anneau qui entoure tout, c'est l'Englobant.",
+    go: "Entrer dans le concept →",
+    soon: "Page en chemin…"
+  },
+  nodes: [
+    { id: "transcendance", x: 500, y: 120, r: 8,
+      label: "La Transcendance",
+      tagline: "Ce qui ne devient jamais objet, et vers quoi l'existence se dépasse.",
+      href: null },
+    { id: "chiffres", x: 320, y: 185, r: 6,
+      label: "Les chiffres",
+      tagline: "Le monde comme écriture : la nature, l'art, l'échec — signes d'un indicible.",
+      href: null },
+    { id: "foi", x: 690, y: 180, r: 6,
+      label: "La foi philosophique",
+      tagline: "Croire sans dogme : tenir dans l'incertitude, éclairé mais non prouvé.",
+      href: null },
+    { id: "existenz", x: 500, y: 320, r: 10,
+      label: "L'Existenz",
+      tagline: "Ce que je peux être — jamais un objet, toujours une possibilité à saisir.",
+      href: null },
+    { id: "liberte", x: 645, y: 275, r: 6,
+      label: "La liberté",
+      tagline: "Je ne suis pas libre comme une chose est ronde : je le deviens en choisissant.",
+      href: null },
+    { id: "communication", x: 780, y: 360, r: 7,
+      label: "La communication",
+      tagline: "La vérité commence à deux : l'amour en lutte qui révèle chacun à soi-même.",
+      href: null },
+    { id: "situations", x: 270, y: 350, r: 8,
+      label: "Les situations-limites",
+      tagline: "Mort, souffrance, lutte, faute : les murs contre lesquels l'existence s'éveille.",
+      href: "concepts/situations-limites.html" },
+    { id: "naufrage", x: 155, y: 285, r: 6,
+      label: "Le naufrage",
+      tagline: "Toute construction achoppe — et l'échec, lu en vérité, devient langage de l'être.",
+      href: null },
+    { id: "verite", x: 390, y: 470, r: 6,
+      label: "La vérité",
+      tagline: "La vérité n'est pas une possession : elle est en chemin, portée par la communication.",
+      href: null },
+    { id: "histoire", x: 560, y: 515, r: 6, labelBelow: true,
+      label: "Le temps axial",
+      tagline: "Vers 500 av. J.-C., l'humanité s'éveille à elle-même — l'axe de l'histoire.",
+      href: null },
+    { id: "culpabilite", x: 720, y: 470, r: 6,
+      label: "La culpabilité",
+      tagline: "Criminelle, politique, morale, métaphysique : quatre façons de répondre de soi.",
+      href: null },
+    { id: "epoque", x: 245, y: 505, r: 6, labelBelow: true,
+      label: "La situation de l'époque",
+      tagline: "La technique, la masse, l'atome : que devient l'homme dans son temps ?",
+      href: null }
+  ],
+  edges: [
+    ["situations", "existenz"],
+    ["existenz", "liberte"],
+    ["liberte", "communication"],
+    ["existenz", "communication"],
+    ["existenz", "transcendance"],
+    ["transcendance", "chiffres"],
+    ["transcendance", "foi"],
+    ["foi", "existenz"],
+    ["chiffres", "naufrage"],
+    ["naufrage", "situations"],
+    ["situations", "culpabilite"],
+    ["verite", "communication"],
+    ["verite", "existenz"],
+    ["histoire", "epoque"],
+    ["epoque", "situations"],
+    ["culpabilite", "histoire"]
+  ]
+};
+</script>
+<script src="assets/js/constellation.js"></script>
+
+</body>
+</html>
