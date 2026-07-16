@@ -868,3 +868,42 @@ p.cequecest {
 
 .retour-bas .retour-lien { color: var(--ink-mute); }
 .retour-bas .retour-lien:hover { color: var(--gold); }
+
+/* ---------- Glossaire : navigation A-Z et lettres ---------- */
+
+.gloss-alpha {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: var(--space-md);
+}
+
+.gloss-alpha a {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  min-width: 2rem;
+  padding: 0.25rem 0.4rem;
+  text-align: center;
+}
+
+.gloss-alpha a:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.gloss-letter {
+  font-size: 1.9rem;
+  color: var(--gold);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.2rem;
+  margin-top: var(--space-lg);
+  scroll-margin-top: 1rem;
+}
+
+.gloss-letter:first-child { margin-top: 0; }
