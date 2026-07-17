@@ -545,6 +545,19 @@ blockquote.jaspers footer {
   margin-bottom: var(--space-xs);
 }
 
+.site-footer .footer-contact {
+  margin-top: var(--space-xs);
+}
+.site-footer .footer-contact a {
+  color: var(--gold-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.site-footer .footer-contact a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
 @media (max-width: 760px) {
   html { font-size: 17px; }
   /* Sur téléphone : la constellation garde une taille lisible (≥ 12 pt)
